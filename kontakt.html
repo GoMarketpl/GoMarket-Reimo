@@ -1,9 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <title>Kontakt - GoMarket.pl Reimo</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Dodatkowe style dla strony kontaktowej */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .contact-details, .contact-map {
+      flex: 1 1 300px;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .contact-details h2,
+    .contact-details h3 {
+      margin-top: 0;
+      color: #000;
+    }
+    .contact-details p {
+      line-height: 1.5;
+      color: #000;
+      margin-bottom: 15px;
+    }
+    .contact-map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+    }
+    a { 
+      color: #ff0000;
+      text-decoration: none;
+    }
+    a:hover { 
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,20 +48,51 @@
       <a href="index.html">Produkty</a> | <a href="kontakt.html">Kontakt</a>
     </nav>
   </header>
-
   <main>
-    <section id="contact-form">
-      <h2>Skontaktuj się z nami 1:1</h2>
-      <form action="#" method="post">
-        <label for="name">Imię i nazwisko:</label><br>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">Wiadomość:</label><br>
-        <textarea id="message" name="message"></textarea><br><br>
-        <input type="submit" value="Wyślij">
-      </form>
-    </section>
+    <div class="contact-container">
+      <div class="contact-details">
+        <h2>Sklep firmowy Warszawa</h2>
+        <p>
+          GoMarket.pl Sp. z o.o.<br>
+          01-531 Warszawa, ul. Wybrzeże Gdyńskie 2<br>
+          teren KS. „Spójnia” przy Wisłostradzie
+        </p>
+        <h3>Współrzędne</h3>
+        <p>52°15'07.6"N 21°00'59.5"E / 52.252064, 21.016528</p>
+        <h3>Godziny otwarcia sklepu</h3>
+        <p>Pon. - Pt.: 9:00 - 17:00<br>Sob.: 9:00 - 14:00</p>
+        <p>
+          <strong>biuro@GoMarket.pl</strong><br>
+          tel. 22 839 20 24, 774 50 26<br>
+          (nie możesz się dodzwonić, napisz e-maila wraz z numerem tel.)
+        </p>
+        <p><strong>Sprzedaż hurtowa:</strong> biuro@GoMarket.pl</p>
+        <p><a href="#map">+ Zobacz lokalizację na interaktywnej mapie Warszawy</a></p>
+        <h3>Dane rejestrowe firmy</h3>
+        <p>
+          GoMarket.pl Sp. z o.o.<br>
+          01-120 Legionowo, ul. Handlowa 4<br>
+          NIP: 5361933263<br>
+          REGON: 142590076<br>
+          KRS: 0000356699<br>
+          Adres korespondencyjny: ul. Handlowa 4<br>
+          e-mail: biuro@GoMarket.pl
+        </p>
+        <h3>Wpłata na konto</h3>
+        <p>
+          GoMarket.pl Sp. z o.o., 05-120 Legionowo, ul. Handlowa 4<br>
+          Nr. OSZCZĘDNOŚCIOWE 36 1020 1026 0000 8702 0171 0065
+        </p>
+      </div>
+      <div class="contact-map" id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2433.2282094765617!2d21.016528!3d52.252064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spl!2spl!4v1594729187345!5m2!1spl!2spl"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0">
+        </iframe>
+      </div>
+    </div>
   </main>
 </body>
 </html>
