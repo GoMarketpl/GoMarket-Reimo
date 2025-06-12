@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GoMarket Reimo Catalog</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 4px 8px; }
+    th { background: #eee; }
+  </style>
+</head>
+<body>
+  <h1>GoMarket Reimo Catalog</h1>
+  <table id="product-table">
+    <thead>
+      <tr><th>Code</th><th>Description</th><th>Page</th><th>File</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+<script>
+async function loadProducts() {
+  const response = await fetch('data/products.json');
+  const products = await response.json();
+  const tbody = document.querySelector('#product-table tbody');
+  products.forEach(p => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${p.code}</td><td>${p.description}</td><td>${p.page}</td><td>${p.file}</td>`;
+    tbody.appendChild(tr);
+  });
+}
+loadProducts();
+</script>
+</body>
+</html>
